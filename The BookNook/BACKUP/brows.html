@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Plans - The BookNook</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-left">
+                    <a class="navbar-brand" href="#">The BookNook</a>
+                    <button class="navbar-toggler" onclick="toggleMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="#">Subscription</a>
+                        <ul class="dropdown-content">
+                            <li><a href="brows.html">Browse Plans</a></li>
+                            <li><a href="#">Billing & Payments</a></li>
+                            <li><a href="#">Subscription Details</a></li>
+                        </ul>
+                    </li>
+                </ul>
+               
+                <div class="right-icons">
+                    <a href="cart.html">
+                        <button class="btn-cart" onclick="openCartPage()">
+                            <i class="fas fa-shopping-cart"></i>
+                            Cart
+                            <span class="badge">0</span>
+                        </button>
+                    </a>
+                    <a href="login.html">
+                        <button class="btn-login" onclick="openLoginPage()">Login</button>
+                    </a>
+                    <!-- Profile icon will be added dynamically here after login -->
+                    <a href="profile.html" id="profileLink" style="display: none;">
+                        <div class="profile-icon">
+                            <i class="material-icons" style="color: beige;">person</i> <!-- Use the Material Icons person icon -->
+                        </div>
+                    </a>
+                </div>
+                
+     
+        </nav>
+        <div class="hero">
+            <h1>Discover New Worlds Through Books</h1>
+            <p>Subscribe now to receive curated books delivered to your doorstep every month.</p>
+            <a href="#" class="btn-subscribe">Subscribe Now</a>
+        </div>
+    </header>
+
+    <section style="display: flex;flex-wrap: wrap;justify-content: center; gap: 20px;" id="package-list">
+        <div style="margin-top: 1.25rem;" class="container">
+            <div style="display: flex; justify-content: center;" class="row">
+                <!-- Package data from the API will be added here dynamically -->
+            </div>
+        </div>
+    </section>
+    
+
+    <footer style="text-align: center; padding: 20px; background-color: #007bff; color: #fff;">
+        <div class="foo-container">
+            <p>&copy; 2023 The BookNook. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="SCRIPT/script.js"></script>
+    <script src="SCRIPT/loginscript.js"></script>
+    <script src="SCRIPT/logout.js"></script>
+</body>
+</html>

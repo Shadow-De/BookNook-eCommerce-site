@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - BookNook</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f7f7f7;">
+
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-left">
+                    <a class="navbar-brand" href="index.html">The BookNook</a>
+                    <button class="navbar-toggler" onclick="toggleMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="#">Subscription</a>
+                        <ul class="dropdown-content">
+                            <li><a href="brows.html">Browse Plans</a></li>
+                            <li><a href="bill.html">Billing & Payments</a></li>
+                            <li><a href="#">Subscription Details</a></li>
+                        </ul>
+                    </li>
+                </ul>
+               
+                <div class="right-icons">
+                    <a href="cart.html">
+                        <button class="btn-cart" onclick="openCartPage()">
+                            <i class="bi-cart-fill"></i>
+                            Cart
+                            <span class="badge">2</span>
+                        </button>
+                    </a>
+                    <a href="profile.html" id="profileLink">
+                        <!-- Add your profile icon here -->
+                        <!-- For example, use Font Awesome icon: -->
+                        <i class="fa fa-user"></i>
+                    </a>
+                    <a href="index.html" onclick="handleLogout()">Logout</a>
+                </div>
+                </div>
+        </nav>
+    </header>
+
+    <div style="height: 83.5vh;">
+    <main class="profile-page" style="padding: 40px 0; text-align: center;">
+        <div class="container">
+            <div class="profile-details" style="max-width: 500px; margin: 0 auto; padding: 20px; background-color: #fff; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 5px;">
+                <h2>User Profile</h2>
+                <div class="profile-info" style="text-align: left; margin-bottom: 20px;">
+                    <p><strong>Name:</strong> <span id="username"></span></p>
+                    <p><strong>Email:</strong> <span id="email"></span></p>
+                    <!-- Add other user details here -->
+                </div>
+                <button id="logoutButton" onclick="logout()" style="background-color: #007bff; color: #fff; border: none; cursor: pointer; padding: 10px 20px; border-radius: 5px;">Logout</button>
+            </div>
+        </div>
+    </main>
+</div>
+    <footer style="background-color: #007bff; padding: 20px 0; color: #fff; text-align: center;">
+        <div class="container">
+            <p>&copy; 2023 BookNook. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Replace this with actual user details retrieved from the server
+        const user = {
+            username: 'John Doe',
+            email: 'john@example.com',
+            // Add other user details here
+        };
+
+        // Function to populate user details on the profile page
+        function populateUserProfile() {
+            document.getElementById('username').innerText = user.username;
+            document.getElementById('email').innerText = user.email;
+            // Add other user details here
+        }
+
+     
+
+        // Call the function to populate user details when the page loads
+        populateUserProfile();
+    </script>
+
+<script src="SCRIPT/script.js"></script>
+<script src="SCRIPT/loginscript.js"></script>
+
+
+</body>
+</html>

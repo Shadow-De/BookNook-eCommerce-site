@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Details - The BookNook</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f7f7f7;">
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-left">
+                    <a class="navbar-brand" href="#">The BookNook</a>
+                    <button class="navbar-toggler" onclick="toggleMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="#">Subscription</a>
+                        <ul class="dropdown-content">
+                            <li><a href="brows.html">Browse Plans</a></li>
+                            <li><a href="bill.html">Billing & Payments</a></li>
+                            <li><a href="subdetails.html">Subscription Details</a></li>
+                        </ul>
+                    </li>
+                </ul>
+               
+                <div class="right-icons">
+                    <a href="cart.html">
+                        <button class="btn-cart" onclick="openCartPage()">
+                            <i class="fas fa-shopping-cart"></i>
+                            Cart
+                            <span class="badge">0</span>
+                        </button>
+                    </a>
+                    <a href="login.html">
+                        <button class="btn-login" onclick="openLoginPage()">Login</button>
+                    </a>
+                    <!-- Profile icon will be added dynamically here after login -->
+                    <a href="profile.html" id="profileLink" style="display: none;">
+                        <div class="profile-icon">
+                            <i class="material-icons" style="color: beige;">person</i> <!-- Use the Material Icons person icon -->
+                        </div>
+                    </a>
+                </div>
+                
+     
+        </nav>
+      
+    </header>
+
+    <div style="max-width: 800px; margin: 0 auto; padding: 20px;">
+        <div style="border: 1px solid #ccc; border-radius: 5px; padding: 20px; margin-bottom: 20px;">
+            <div style="font-size: 20px; font-weight: bold; color: #007bff; margin-bottom: 10px;">Premium Subscription</div>
+            <div style="font-size: 16px; color: #555; margin-bottom: 5px;">$9.99/month</div>
+            <div style="font-size: 14px; color: #777; margin-bottom: 10px;">Enjoy unlimited access to our vast collection of books!</div>
+            <ul style="list-style: none; padding-left: 0; margin: 0;">
+                <li style="margin-bottom: 5px;">Access to over 10,000 books</li>
+                <li style="margin-bottom: 5px;">Read on any device</li>
+                <li style="margin-bottom: 5px;">Download books for offline reading</li>
+                <li style="margin-bottom: 5px;">Personalized recommendations</li>
+                <li style="margin-bottom: 5px;">Cancel anytime</li>
+            </ul>
+            <button style="background-color: #007bff; color: #fff; border: none; cursor: pointer; padding: 10px 20px; border-radius: 5px; font-size: 16px;">Subscribe Now</button>
+        </div>
+
+        <div style="border: 1px solid #ccc; border-radius: 5px; padding: 20px; margin-bottom: 20px;">
+            <div style="font-size: 20px; font-weight: bold; color: #007bff; margin-bottom: 10px;">Basic Subscription</div>
+            <div style="font-size: 16px; color: #555; margin-bottom: 5px;">$4.99/month</div>
+            <div style="font-size: 14px; color: #777; margin-bottom: 10px;">Enjoy access to a selection of our top books!</div>
+            <ul style="list-style: none; padding-left: 0; margin: 0;">
+                <li style="margin-bottom: 5px;">Access to 1,000 books</li>
+                <li style="margin-bottom: 5px;">Read on any device</li>
+                <li style="margin-bottom: 5px;">Download books for offline reading</li>
+                <li style="margin-bottom: 5px;">Personalized recommendations</li>
+                <li style="margin-bottom: 5px;">Cancel anytime</li>
+            </ul>
+            <button style="background-color: #007bff; color: #fff; border: none; cursor: pointer; padding: 10px 20px; border-radius: 5px; font-size: 16px;">Subscribe Now</button>
+        </div>
+    </div>
+
+    <footer style="background-color: #007bff; padding: 20px 0; color: #fff; text-align: center;">
+        <div class="">
+            <p>&copy; 2023 BookNook. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="SCRIPT/cart.js"></script>
+</body>
+</html>

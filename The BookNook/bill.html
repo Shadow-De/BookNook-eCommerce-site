@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing - The BookNook</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <style>
+        /* Your inline CSS styles here */
+
+        /* Container styles */
+        .container1 {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            margin-bottom: 50px;
+            margin-top: 50px;
+        }
+
+        /* Form styles */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        /* Input styles */
+        input[type="text"],
+        input[type="email"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        /* Payment methods styles */
+        .payment-methods {
+            margin-bottom: 15px;
+        }
+
+        .payment-method {
+            display: flex;
+            align-items: center;
+        }
+
+        .payment-method input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .payment-method label {
+            font-size: 14px;
+        }
+
+        .payment-method img {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+
+        /* Submit button styles */
+        .btn-submit {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Footer styles */
+        .footer {
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-left">
+                    <a class="navbar-brand" href="#">The BookNook</a>
+                    <button class="navbar-toggler" onclick="toggleMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="#">Subscription</a>
+                        <ul class="dropdown-content">
+                            <li><a href="brows.html">Browse Plans</a></li>
+                            <li><a href="bill.html">Billing & Payments</a></li>
+                            <li><a href="#">Subscription Details</a></li>
+                        </ul>
+                    </li>
+                </ul>
+               
+                <div class="right-icons">
+                    <a href="cart.html">
+                        <button class="btn-cart" onclick="openCartPage()">
+                            <i class="fas fa-shopping-cart"></i>
+                            Cart
+                            <span class="badge">2</span>
+                        </button>
+                    </a>
+                    <a href="login.html">
+                        <button class="btn-login" onclick="openLoginPage()">Login</button>
+                    </a>
+                    <!-- Profile icon will be added dynamically here after login -->
+                    <a href="profile.html" id="profileLink" style="display: none;">
+                        <div class="profile-icon">
+                            <i class="material-icons" style="color: beige;">person</i> <!-- Use the Material Icons person icon -->
+                        </div>
+                    </a>
+                </div>
+                
+     
+        </nav>
+    
+    </header>
+    <div style="height: 76.8vh;">
+    <div class="container1">
+        <form id="billingForm">
+            <div class="form-group">
+                <input type="text" id="fullName" name="fullName" placeholder="Full Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="address" name="address" placeholder="Address" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="city" name="city" placeholder="City" required>
+            </div>
+            <div class="form-group">
+                <input type="number" id="zipCode" name="zipCode" placeholder="Zip Code" required>
+            </div>
+            <div class="form-group payment-methods">
+                <div class="payment-method">
+                    <input type="radio" name="paymentMethod" id="creditCard" value="creditCard" required>
+                    <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/icons/credit-card.svg" alt="Credit Card">
+                    <label for="creditCard">Credit Card</label>
+                </div>
+                <div class="payment-method">
+                    <input type="radio" name="paymentMethod" id="paypal" value="paypal" required>
+                    <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/icons/paypal.svg" alt="PayPal">
+                    <label for="paypal">PayPal</label>
+                </div>
+            </div>
+            <button type="submit" class="btn-submit">Submit Payment</button>
+        </form>
+    </div>
+</div>
+
+    <footer style="background-color: #007bff; padding: 20px 0; color: #fff; text-align: center;">
+        <div class="">
+            <p>&copy; 2023 BookNook. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

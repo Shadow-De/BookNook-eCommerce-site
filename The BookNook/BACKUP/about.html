@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About The BookNook</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+         .btn-subscribe:hover {
+    background-color: #c6c6c6;
+  }
+    </style>
+</head>
+<body style="font-family: 'Arial', sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f7f7f7;">
+
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-left">
+                    <a class="navbar-brand" href="#">The BookNook</a>
+                    <button class="navbar-toggler" onclick="toggleMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="#">Subscription</a>
+                        <ul class="dropdown-content">
+                            <li><a href="brows.html">Browse Plans</a></li>
+                            <li><a href="#">Billing & Payments</a></li>
+                            <li><a href="#">Subscription Details</a></li>
+                        </ul>
+                    </li>
+                 
+                </ul>
+                <div class="right-icons">
+                    <a href="cart.html">
+                        <button class="btn-cart" onclick="openCartPage()">
+                            <i class="fas fa-shopping-cart"></i>
+                            Cart
+                            <span class="badge">0</span>
+                        </button>
+                    </a>
+                    <a href="login.html">
+                        <button class="btn-login" onclick="openLoginPage()">Login</button>
+                    </a>
+                    <!-- Profile icon will be added dynamically here after login -->
+                    <a href="profile.html" id="profileLink" style="display: none;">
+                        <div class="profile-icon">
+                            <i class="material-icons" style="color: beige;">person</i> <!-- Use the Material Icons person icon -->
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="hero" style="background-color: #007bff; text-align: center; padding: 100px 20px;">
+            <h1 style="font-size: 36px;margin-bottom: 20px;">Discover New Worlds Through Books</h1>
+            <p style="font-size: 18px; color: #ffffff; margin-bottom: 30px;">Subscribe now to receive curated books delivered to your doorstep every month.</p>
+            <a href="brows.html" class="btn-subscribe" style=" background-color: #ffffff;color: #007bff;padding: 12px 30px;border: none;border-radius: 4px;font-size: 18px;text-decoration: none;transition: background-color 0.3s ease-in-out;">Subscribe Now</a>
+        </div>
+    </header>
+
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 40px;">
+
+        <section class="about-section" style="text-align: center;">
+            <div class="about-text" style="max-width: 800px; margin: 0 auto;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: #007bff;">About The BookNook</h2>
+                <p style="font-size: 1.1rem; color: #333; margin-bottom: 20px;">
+                    The BookNook is a premier book subscription service that delivers handpicked books right to your doorstep every month. We believe in the power of books to transport you to new worlds and enrich your life with knowledge and imagination.
+                </p>
+                <p style="font-size: 1.1rem; color: #333; margin-bottom: 20px;">
+                    Our team of avid readers carefully curates a selection of the finest books across genres, from thrilling mysteries to heartwarming romances and thought-provoking non-fiction. Each month, you'll receive a surprise package containing a new adventure waiting to be explored.
+                </p>
+                <p style="font-size: 1.1rem; color: #333; margin-bottom: 20px;">
+                    With flexible plans and hassle-free billing, it's easy to join The BookNook and start your literary journey. Whether you're a seasoned book lover or just discovering the joy of reading, we're here to inspire and ignite your passion for books.
+                </p>
+                <a href="#" class="learn-more-button" style="background-color: #007bff; color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 5px; display: inline-block; margin-top: 20px;">Learn More</a>
+            </div>
+        </section>
+
+    </div>
+
+    <section class="contact-section" style="text-align: center; padding: 40px 0; background-color: #fff;">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 30px; color: #007bff;">Contact Us</h2>
+            <ul class="contact-details" style="margin-bottom: 30px; font-size: 1.1rem; color: #333; list-style: none; padding: 0;">
+                <li style="margin-bottom: 15px;">Email: info@booknook.com</li>
+                <li style="margin-bottom: 15px;">Phone: +1 123-456-7890</li>
+            </ul>
+            <form class="contact-form" style="max-width: 400px; margin: 0 auto;">
+                <input type="text" placeholder="Your Name" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; margin-bottom: 20px;">
+                <input type="email" placeholder="Your Email" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; margin-bottom: 20px;">
+                <textarea placeholder="Your Message" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; margin-bottom: 20px;"></textarea>
+                <button type="submit" style="background-color: #007bff; color: #fff; border: none; cursor: pointer; width: 100%; padding: 10px; border-radius: 5px;">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+     <footer>
+        <div class="foo-container">
+            <p>&copy; 2023 The BookNook. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="SCRIPT/script.js"></script>
+    <script src="SCRIPT/loginscript.js"></script>
+    
+
+</body>
+</html>
